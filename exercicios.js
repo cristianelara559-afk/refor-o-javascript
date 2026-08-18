@@ -37,7 +37,11 @@
 // Fórmula: F = C * 9/5 + 32
 // ------------------------------------------------------------
 
+const celsius = 30;
 
+const fahrenheit = (celsius * 9) / 5 + 32;
+
+console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 
 
 // EXERCÍCIO 3 - Par ou ímpar
