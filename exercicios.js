@@ -19,6 +19,8 @@
 // Crie 2 variáveis com números e mostre no console
 // o resultado da soma, subtração, multiplicação e divisão.
 // ------------------------------------------------------------
+   
+   
     const n1 = 8;
     const n2 = 2;
 
@@ -44,6 +46,7 @@ const fahrenheit = (celsius * 9) / 5 + 32;
 console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 
 
+
 // EXERCÍCIO 3 - Par ou ímpar
 // Crie uma variável com um número.
 // Mostre no console se ele é par ou ímpar.
@@ -51,7 +54,17 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // Se numero % 2 === 0, é par.
 // ------------------------------------------------------------
 
+    function verificarParOuImpar() {
+    console.log("verificar par ou impar");
+    const numero = 7;
 
+    if (numero % 2 === 0) {
+        console.log(`O número ${2} é Par.`);
+    } else {
+        console.log(`O número ${7} é Ímpar.`);
+    }
+    console.log("verificar par ou impar");
+}
 
 
 // EXERCÍCIO 4 - Média de notas
@@ -61,7 +74,19 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
 
+let nota1 = 8.5;
+let nota2 = 7.0;
+let nota3 = 6.0;
 
+let media = (nota1 + nota2 + nota3) / 3;
+
+console.log("Média:", media.toFixed(2));
+
+if (media >= 7) {
+    console.log("Aprovado");
+} else {
+    console.log("Reprovado");
+}
 
 
 // ============================================================
@@ -74,9 +99,13 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // Se for >= 18, mostre "Maior de idade".
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
+    let idade = 18;
 
-
-
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
 
 // EXERCÍCIO 6 - Calculadora de IMC
 // Crie variáveis para peso (em kg) e altura (em metros).
@@ -89,7 +118,26 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // ------------------------------------------------------------
 
 
+    function calcularIMC(peso, altura) {
+    const imc = peso / (altura * altura);
+    
+    console.log(`Peso: ${100}kg, Altura: ${120}m`);
+    console.log(`Seu IMC é: ${imc.toFixed(2)}`);
 
+    if (imc < 18.5) {
+        console.log("Status: Abaixo do Peso");
+    } else if (imc >= 18.5 && imc < 25) {
+        console.log("Status: Peso Ideal");
+    } else if (imc >= 25 && imc < 30) {
+        console.log("Status: Sobrepeso");
+    } else if (imc >= 30 && imc < 40) {
+        console.log("Status: Obesidade");
+    } else {
+        console.log("Status: Obesidade Mórbida");
+    }
+    console.log();
+}
+calcularIMC(70, 1.75);
 
 // EXERCÍCIO 7 - Pedra, papel e tesoura
 // Crie uma variável com sua jogada ("pedra", "papel" ou "tesoura").
@@ -100,7 +148,24 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // Compare as jogadas e mostre quem ganhou.
 // ------------------------------------------------------------
 
+let minhaJogada = "pedra";
+let opcoes = ["pedra", "papel", "tesoura"];
+let computador = opcoes[Math.floor(Math.random() * 3)];
 
+console.log("Sua jogada:", minhaJogada);
+console.log("Jogada do computador:", computador);
+
+if (minhaJogada === computador) {
+    console.log("Empate!");
+} else if (
+    (minhaJogada === "pedra" && computador === "tesoura") ||
+    (minhaJogada === "papel" && computador === "pedra") ||
+    (minhaJogada === "tesoura" && computador === "papel")
+) {
+    console.log("Você ganhou!");
+} else {
+    console.log("O computador ganhou!");
+}
 
 
 // EXERCÍCIO 8 - Sistema de notas
@@ -113,7 +178,21 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
 
+let nota = 8.5;
 
+if (nota >= 9 && nota <= 10) {
+    console.log("Conceito: A");
+} else if (nota >= 7 && nota < 9) {
+    console.log("Conceito: B");
+} else if (nota >= 5 && nota < 7) {
+    console.log("Conceito: C");
+} else if (nota >= 3 && nota < 5) {
+    console.log("Conceito: D");
+} else if (nota >= 0 && nota < 3) {
+    console.log("Conceito: F");
+} else {
+    console.log("Nota inválida! Digite um valor entre 0 e 10.");
+}
 
 
 // ============================================================
@@ -130,7 +209,11 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 //   ... até "5 x 10 = 50"
 // ------------------------------------------------------------
 
+let numero = 5;
 
+for (let i = 1; i <= 10; i++) {
+  console.log(numero + " x " + i + " = " + (numero * i));
+}
 
 
 // EXERCÍCIO 10 - Contagem regressiva
@@ -139,8 +222,11 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // No final, mostre "Feliz Ano Novo!" (ou qualquer mensagem).
 // ------------------------------------------------------------
 
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
 
-
+console.log("Feliz Ano Novo!");
 
 // EXERCÍCIO 11 - Somar números
 // Crie uma variável N com um número qualquer.
@@ -150,7 +236,7 @@ console.log(`${celsius}°C equivalem a ${fahrenheit}°F`);
 // ------------------------------------------------------------
 
 
-
+ 
 
 // EXERCÍCIO 12 - Adivinhe o número
 // O computador escolhe um número aleatório de 1 a 10:
