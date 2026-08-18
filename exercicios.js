@@ -19,6 +19,14 @@
 // Crie 2 variáveis com números e mostre no console
 // o resultado da soma, subtração, multiplicação e divisão.
 // ------------------------------------------------------------
+    const n1 = 8;
+    const n2 = 2;
+
+    console.log("soma", n1 + n2); 
+    console.log("subtracao", n1 - n2);
+    console.log("multiplicacao", n1 * n2);
+    console.log("divisao", n1 / n2);
+
 
 
 
